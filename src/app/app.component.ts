@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularMovie';
+  isCollapsed = true;
+
+  toggleNavbar() {
+    this.isCollapsed = !this.isCollapsed;
+  }
+
 }

@@ -1,0 +1,83 @@
+.ForRow{
+    display: flex; 
+    
+    flex-wrap: wrap; 
+    gap: 0.5cm; 
+    justify-content: space-between;
+    width: 1200px;
+}
+.mvcard{
+    width: 200px;
+    height: 330px;
+    
+}
+.mvCardRow{
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 0cm; 
+    justify-content: space-between;
+    
+}
+.mvcardslide{
+    width: 400px;
+    height: 550px;
+    cursor: pointer;
+}
+.title{
+    font-size: 20px;
+    text-align: center;
+}
+.popularity{
+    font-size: 10px;
+    text-align: right;
+}
+.container{
+    margin-left: 3cm;
+}
+.slide{
+    margin-left: 1cm;
+    margin-bottom: 2cm;
+}
+
+
+@media (width<800px) {
+    .ForRow{
+        display: flex; 
+        
+        flex-wrap: wrap; 
+        gap: 0.5cm; 
+        justify-content: space-between;
+        width: 100%;
+    }
+    .mvcard{
+        width: 90px;
+        height: 130px;
+        
+    }
+    .mvCardRow{
+        display: flex; 
+        flex-wrap: wrap; 
+        gap: 0cm; 
+        justify-content: space-between;
+        
+    }
+    .mvcardslide{
+        width: 120px;
+        height: 200px;
+        cursor: pointer;
+    }
+    .title{
+        font-size: 20px;
+        text-align: center;
+    }
+    .popularity{
+        font-size: 10px;
+        text-align: right;
+    }
+    .container{
+        margin-left: 0cm;
+    }
+    .slide{
+        margin-left: 0.5cm;
+    }
+}

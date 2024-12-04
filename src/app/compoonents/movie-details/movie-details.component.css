@@ -1,0 +1,173 @@
+.all{
+    margin: 0% 0% 5% 7%;
+    display: flex;
+}
+.title{
+    font-size: 100px;
+    text-align: right;
+    font-family: "jaro", cursive;
+    color: blueviolet;
+}
+.overview{
+    font-size: 15px;
+   text-align: left;
+   color: rgb(83, 15, 139);
+   font-family:Georgia, 'Times New Roman', Times, serif
+    
+}
+.rld{
+    color: rgb(83, 13, 150);
+    text-align: right;
+}
+.text-box{
+    align-items: right;
+    width: 550px;
+}
+.language{
+    text-align: right;
+    color: blueviolet;
+}
+.play{
+    font-size: 100px;
+    margin-left: 80%;
+    cursor: pointer;
+}
+.ovw{
+    margin-left: .5cm;
+    padding: 15px 15px 15px 5px;
+}
+
+.mvCardRow{
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 0cm; 
+    justify-content: space-between;
+    
+}
+.mvcardslide{
+    width: 190px;
+    height: 280px;
+    cursor: pointer;
+}
+.title{
+    font-size: 20px;
+    text-align: center;
+}
+.popularity{
+    font-size: 10px;
+    text-align: right;
+}
+
+.slide{
+    margin-left: 2cm;
+    padding-bottom: 2cm;
+} 
+.img1{
+    width: 200px;
+    height: 500px;
+}
+.img{
+    margin-top: 1cm;
+    width: 500px;
+    height: 700px;
+}
+.cardb{
+    width: 500px;height: 700px;margin-left: 1cm;
+}
+.card{
+    background-color: transparent;
+    border-color: transparent;
+}
+@media (width<800px) {
+    .all{
+        margin: 0% 0% 0% 7%;
+        display: flex;
+    }
+    .title{
+        font-size: 100px;
+        text-align: right;
+        font-family: "jaro", cursive;
+        color: blueviolet;
+        
+    }
+    .overview{
+        font-size: 15px;
+       text-align: left;
+       color: rgb(83, 15, 139);
+       font-family:Georgia, 'Times New Roman', Times, serif
+        
+    }
+    .rld{
+        color: rgb(83, 13, 150);
+        text-align: right;
+        font-size: smaller;
+    }
+    .text-box{
+        align-items: right;
+        width:100%;
+        padding-right: 1cm;
+    }
+    .language{
+        text-align: right;
+        color: blueviolet;
+    }
+    .play{
+        font-size: 50px;
+        margin-left: 70%;
+        cursor: pointer;
+    }
+    .ovw{
+        
+        margin-top: 6.5cm;
+        margin-left: 0cm;
+        margin-right: .5cm;
+        padding: 15px 15px 15px 5px;
+        width: 450px;
+    }
+    
+    .mvCardRow{
+        display: flex; 
+        flex-wrap: wrap; 
+        gap: 0cm; 
+        justify-content: last baseline;
+        
+        
+    }
+    .mvcardslide{
+        width: 40px;
+        height: 150px;
+        cursor: pointer;
+    }
+    .title{
+        font-size: 20px;
+        text-align: center;
+    }
+    .popularity{
+        font-size: 10px;
+        text-align: right;
+    }
+    
+    .slide{
+        margin-left: 0cm;
+        margin-right: .1cm;
+        padding-bottom: 2cm;
+    } 
+    .img1{
+        width: 90px;
+        height: 120px;
+    }
+    .img{
+        width: 200px;
+        height: 300px;
+    }
+    .cardb{
+        width: 100px;
+        height: 200px;
+        margin-left: 0cm;
+    }
+    .card{
+        background-color: transparent;
+        border-color: transparent;
+    }
+    
+}

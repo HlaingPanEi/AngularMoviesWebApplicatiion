@@ -1,38 +1,21 @@
-.bg{
-   
-    background: rgba(0, 151, 193, 0.6);
-    
-     
- }
- .navbar{
+.navbar{
     position: sticky;
     top:0;
-    
-    
-    backdrop-filter: blur(2px);
-    width: 90%;
-    margin: 0% 0% 0% 5%;
-
+    background: transparent;
+    backdrop-filter: blur(10px);
 }
  
  
- 
- 
- 
  .navname{
-     
+     margin-left: 7%;
      font-family: "Hachi Maru Pop", cursive;
      font-weight: bolder;
      font-size: 40px;
-     color:#000000;
-     
+     color:#6879bc
  }
  .navbar-collapse{
      margin: 0% 3% 0% 40%;
  }
-
-
- 
  
  @media (max-width: 768px){
      .navname{
