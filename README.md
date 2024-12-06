@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4. This enables users to view movie details, such as titles, overviiews, ratings, and images. 
 
-#Features
+## Features
 support dark mode and optimized for both desktop and mobile.
 
 ## Development server
