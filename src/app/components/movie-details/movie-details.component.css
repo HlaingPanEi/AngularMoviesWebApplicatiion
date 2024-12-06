@@ -11,12 +11,12 @@
 .overview{
     font-size: 15px;
    text-align: left;
-   color: rgb(83, 15, 139);
+   color: blueviolet;
    font-family:Georgia, 'Times New Roman', Times, serif
     
 }
 .rld{
-    color: rgb(83, 13, 150);
+    color: blueviolet;
     text-align: right;
 }
 .text-box{
@@ -72,12 +72,32 @@
     height: 700px;
 }
 .cardb{
-    width: 500px;height: 700px;margin-left: 1cm;
+    width: 500px;
+    height: 700px;
+    margin-left: 1cm;
 }
 .card{
     background-color: transparent;
     border-color: transparent;
+    
 }
+.star-rating {
+    display: flex;
+    font-size: 2rem; /* Adjust size as needed */
+    color: #d3d3d3; /* Default star color */
+    cursor: pointer;
+    margin-left: 60%;
+  }
+  
+  .star {
+    margin: 0 5px;
+    transition: color 0.2s;
+  }
+  
+  .star.filled {
+    color: #2836a1; /* Star color when filled (gold) */
+  }
+  
 @media (width<800px) {
     .all{
         margin: 0% 0% 0% 7%;
@@ -87,18 +107,18 @@
         font-size: 100px;
         text-align: right;
         font-family: "jaro", cursive;
-        color: blueviolet;
+       
         
     }
     .overview{
         font-size: 15px;
        text-align: left;
-       color: rgb(83, 15, 139);
+       
        font-family:Georgia, 'Times New Roman', Times, serif
         
     }
     .rld{
-        color: rgb(83, 13, 150);
+        
         text-align: right;
         font-size: smaller;
     }
@@ -109,7 +129,7 @@
     }
     .language{
         text-align: right;
-        color: blueviolet;
+        
     }
     .play{
         font-size: 50px;

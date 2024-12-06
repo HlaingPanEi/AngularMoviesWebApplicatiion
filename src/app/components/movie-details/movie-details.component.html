@@ -1,0 +1,36 @@
+<div class="all" >
+  <div class="card cardb"[routerLink]="['/',Result.title]" >
+      <img class="card-img img"
+      [src]="'http://image.tmdb.org/t/p/w500/' + Result.poster_path"
+      alt=""
+      
+    />
+  
+    
+    </div>
+   <div class="text-box">
+      <div class="title container-fluid">{{Result.title}}</div>
+     
+      <div class="language">{{Result.original_language}}<i class="fas fa-globe-americas" style="color: black;"></i></div>
+     
+     <div class="play btn"><i class="fas fa-play-circle"></i></div>
+    <div class="star-rating">
+      <i 
+      *ngFor="let star of stars; let i = index"
+      class="star"
+      [ngClass]="{'filled': i < Result.vote_average / 2}" 
+      [title]="(i + 1) * 2 + ' / 10'">
+      ★
+    </i>
+    </div>
+    <div class="rld">{{Result.vote_average}}</div>
+   
+     <div class="container shadow ovw">
+      <div class="overview"><h1 style="text-align: right;">Overview</h1>
+          {{Result.overview}}</div>
+     </div>
+     <div class="rld">Releast Date ({{Result.release_date}})</div>
+   </div>
+</div>
+<hr style="border: 2px dotted;">
+

@@ -10,6 +10,62 @@ export class TopRatedMoviesComponent implements OnInit{
 movieListResults = [
   {
     "adult": false,
+    "backdrop_path": "/vf7BYmweDLZptuTSjq8Lo044aaj.jpg",
+    "genre_ids": [
+      28,
+      53
+    ],
+    "id": 1094974,
+    "original_language": "en",
+    "original_title": "Take Cover",
+    "overview": "A burned-out professional sniper finds himself trapped in an all-glass penthouse by a lethal competitor and must find a way to survive and escape with little to no cover between him and the killer.",
+    "popularity": 230.577,
+    "poster_path": "/xNLiMNyFzKTL9PVIEulG55Hei8j.jpg",
+    "release_date": "2024-10-04",
+    "title": "Take Cover",
+    "video": false,
+    "vote_average": 6.921,
+    "vote_count": 70
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/suhYlUq1qqdqdZHfY30ijBPCS6o.jpg",
+    "genre_ids": [
+      99
+    ],
+    "id": 1290034,
+    "original_language": "en",
+    "original_title": "Defying Gravity: The Curtain Rises on Wicked",
+    "overview": "A behind-the-scenes look at the highly-anticipated two-part film adaptation of the hit Broadway musical, featuring interviews with the cast and crew.",
+    "popularity": 210.023,
+    "poster_path": "/7SBOaeKcPsvquHKhyKUN8gZ4tzo.jpg",
+    "release_date": "2024-11-16",
+    "title": "Defying Gravity: The Curtain Rises on Wicked",
+    "video": false,
+    "vote_average": 10,
+    "vote_count": 2
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/zAqBIeO71BFL7bAtP5TFzVjVamy.jpg",
+    "genre_ids": [
+      10749,
+      18
+    ],
+    "id": 1079091,
+    "original_language": "en",
+    "original_title": "It Ends with Us",
+    "overview": "When a woman's first love suddenly reenters her life, her relationship with a charming, but abusive neurosurgeon is upended, and she realizes she must learn to rely on her own strength to make an impossible choice for her future.",
+    "popularity": 198.654,
+    "poster_path": "/cSMdFWmajaX4oUMLx7HEDI84GkP.jpg",
+    "release_date": "2024-08-07",
+    "title": "It Ends with Us",
+    "video": false,
+    "vote_average": 7.242,
+    "vote_count": 1093
+  },
+  {
+    "adult": false,
     "backdrop_path": "/zfbjgQE1uSd9wiPTX4VzsLi0rGG.jpg",
     "genre_ids": [
       18,
@@ -247,7 +303,7 @@ movieListResults = [
 ]
 constructor(){}
   ngOnInit() {
-    this.groupedMovieList = this.chunkArray(this.movieListResults, 3); // Groups of 2 movies per slide
+    this.groupedMovieList = this.chunkArray(this.movieListResults, 2); // Groups of 2 movies per slide
   }
   chunkArray(array: any[], chunkSize: number): any[] {
     const result = [];

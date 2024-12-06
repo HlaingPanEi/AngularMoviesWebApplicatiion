@@ -1,3 +1,34 @@
+/* Base styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(250deg, rgb(133, 110, 145), rgb(157, 169, 215) 70%); /* Dark mode background */
+    color: #ececec; /* Text color */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+
+  /* Dark mode toggle */
+  .dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .dark-mode {
+    background: linear-gradient(250deg, rgb(63, 40, 75), rgb(31, 37, 60) 70%);
+    color: #ddd;
+  }
+  
+
+
 .bg{
    
     background: rgba(0, 151, 193, 0.6);
@@ -8,10 +39,11 @@
     position: sticky;
     top:0;
     
-    
-    backdrop-filter: blur(2px);
+    height: 100px;
+    backdrop-filter: blur(20px);
     width: 90%;
     margin: 0% 0% 0% 5%;
+    border-radius: 10px;
 
 }
  
@@ -24,12 +56,20 @@
      font-family: "Hachi Maru Pop", cursive;
      font-weight: bolder;
      font-size: 40px;
-     color:#000000;
+     color:blueviolet;
      
  }
  .navbar-collapse{
      margin: 0% 3% 0% 40%;
  }
+.nav-link{
+    color: blueviolet;
+}
+
+
+
+
+
 
 
  
@@ -41,6 +81,9 @@
          font-size: 20px;
         
      }
+     .nav-link{
+        color: rgb(137, 98, 173);
+    }
      .mr-sm-0{
          height: 40px;
          margin-top: .2cm;
@@ -50,5 +93,17 @@
          text-align: right;
          margin-right: 1%;
      }
-     
+     .dark-mode-toggle {
+        position: fixed;
+        top: 1px;
+        right: 90%;
+        background-color: #444;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        
+      }
+      
  }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Results } from '../../models/results';
+
 
 @Component({
   selector: 'app-popular-movies',
@@ -412,11 +412,22 @@ export class PopularMoviesComponent implements OnInit{
     },
    
   ]
+  isCollapsed = true;
+  isDarkMode = false;
+
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+  }
+
+
+  toggleNavbar() {
+    this.isCollapsed = !this.isCollapsed;
+  }
 
 
   constructor(){}
   ngOnInit() {
-    this.groupedMovieList = this.chunkArray(this.movieListResults, 3); // Groups of 2 movies per slide
+    this.groupedMovieList = this.chunkArray(this.movieListResults, 2); // Groups of 2 movies per slide
   }
   chunkArray(array: any[], chunkSize: number): any[] {
     const result = [];
