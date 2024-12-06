@@ -1,6 +1,9 @@
 # AngularMovie
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4. This enables users to view movie details, such as titles, overviiews, ratings, and images. 
+
+#Features
+support dark mode and optimized for both desktop and mobile.
 
 ## Development server
 
@@ -25,3 +28,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
