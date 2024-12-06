@@ -75,6 +75,8 @@
 .slide{
     margin-left: 1cm;
     margin-bottom: 2cm;
+     padding-top: 3cm;
+     max-height: fit-content;
 }
 
 

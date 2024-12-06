@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomePageComponent,
     NavBarComponent,
     MovieDetailsComponent,
-    FooterComponent
+    FooterComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

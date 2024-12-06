@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MovieService } from '../../movie.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,11 +8,22 @@ import { MovieService } from '../../movie.service';
   styleUrl: './nav-bar.component.css'
 })
 export class NavBarComponent implements OnInit{
-movies:any;
-  constructor(private movieService: MovieService){}
+  @Input() searchTerm: string = '';  
+  movies:any;
+
+
+  constructor(private movieService: MovieService, private router: Router){}
+
    ngOnInit() {
-       this.movies = this.movieService.getTopRated();
+       this.movies = this.movieService.getMovies();
    }
+   navigateAndRefresh(movieTitle: string) {
+    this.router.navigate([`/${movieTitle}`]).then(() => {
+      // After navigation, trigger a refresh by navigating to the same route again
+      window.location.reload();
+    });
+   
+  }
 
-
+   
 }
