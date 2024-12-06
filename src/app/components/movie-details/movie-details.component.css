@@ -102,6 +102,7 @@
     .all{
         margin: 0% 0% 0% 7%;
         display: flex;
+       
     }
     .title{
         font-size: 100px;
@@ -133,16 +134,16 @@
     }
     .play{
         font-size: 50px;
-        margin-left: 70%;
+        margin-left: 80%;
         cursor: pointer;
     }
     .ovw{
         
-        margin-top: 6.5cm;
+        margin-top: 5cm;
         margin-left: 0cm;
-        margin-right: .5cm;
+        margin-right: 0cm;
         padding: 15px 15px 15px 5px;
-        width: 450px;
+        width: 300px;
     }
     
     .mvCardRow{
@@ -190,7 +191,32 @@
         border-color: transparent;
     }
     .star {
+
         margin: 0 1px;
         transition: color 0.2s;
+        font-size: 15px;
       }
+    .star-rating{
+        margin-left: 72%;
+    }
+}
+
+@media (height<400px) {
+    .ovw{
+        
+        margin-top: 0cm;
+        margin-left: 4cm;
+        margin-right: 0cm;
+        padding: 15px 15px 15px 5px;
+        width: 380px;
+    }
+    .star-rating{
+        margin-left: 84%;
+    }
+    .play{
+        font-size: 50px;
+        margin-left: 89%;
+        cursor: pointer;
+    }
+   
 }

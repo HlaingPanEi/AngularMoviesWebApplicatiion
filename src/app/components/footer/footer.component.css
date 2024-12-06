@@ -1,3 +1,35 @@
 .ft{
     color: rgb(189, 215, 247);
 }
+.footer{
+    padding-bottom: 4cm;padding-top: 2cm;
+}
+.nl{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ }
+@media (width< 800px) {
+     .nl{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        text-align: center;
+     }
+     .footer{
+        padding-bottom: 4cm;
+        padding-top: 1cm;
+    }
+} 
+
+@media (height< 400px) {
+    .nl{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        text-align: center;
+     }
+}

@@ -76,6 +76,7 @@ body {
      font-weight: bolder;
      font-size: 40px;
      color:blueviolet;
+     padding-left: 3cm;
      
  }
  .navbar-collapse{
@@ -115,7 +116,7 @@ body {
      .dark-mode-toggle {
         position: fixed;
         top: 1px;
-        right: 93%;
+        right: 90%;
         border: none;
         padding: 3px;
         border-radius: 50%;
@@ -126,7 +127,7 @@ body {
       .light-mode-toggle{
         position: fixed;
         top: 1px;
-        right: 93%;
+        right: 90%;
         background-color: #999999;
         color: #ffffff;
         border: none;
@@ -140,5 +141,37 @@ body {
         width: 200px;
         margin-top: .2cm;
         font-size: xx-small;
+      }
+      .navbar{
+        position: sticky;
+        top:0;
+        height: auto;
+        backdrop-filter: blur(20px);
+        width: 90%;
+        margin: 0% 0% 0% 5%;
+        border-radius: 10px;
+      }
+ }
+
+ @media (height<400px) {
+    .btn-sm{
+        height: 30px;
+        
+    }
+    .search{
+        height: 30px;
+        width: 200px;
+        margin-top: 0cm;
+        font-size: xx-small;
+      }
+      .navbar{
+        position: sticky;
+        top:0;
+        
+        height: auto;
+        backdrop-filter: blur(20px);
+        width: 90%;
+        margin: 0% 0% 0% 5%;
+        border-radius: 10px;
       }
  }

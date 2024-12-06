@@ -1,21 +1,23 @@
 
 
 
-<div [ngClass]="{'dark-mode': isDarkMode}">
+<div [ngClass]="{'dark-mode': isDarkMode}" >
  
  
 
 <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow" >
-  <a class="navbar-brand navname" [routerLink]="['home']" routerLinkActive="active" > Movies</a>
+  <a class="navbar-brand navname"  routerLinkActive="active" > Movies</a>
 
-  <form class="form-inline my-2 my-sm-0 sm" style=" display: flex; background-color: transparent;border-color: transparent;">
+  <form class="form-inline my-2 my-sm-0 sm" style=" display: flex; background-color: transparent;border-color: transparent;" >
    
-    <input type="text" name="searchTerm" [(ngModel)]="searchTerm" class="search" [ngModelOptions]="{standalone: true}" placeholder="Search for movies..." style="background-color: transparent;border-color: purple;border-radius: 10px;" />
-    <button class="btn btn-outline-dark my-2 my-sm-0 btn-sm" type="submit">Search</button>
+    <input type="text" name="searchTerm" [(ngModel)]="searchTerm"  class="search" [ngModelOptions]="{standalone: true}" placeholder="Search for movies..." style="background-color: transparent;border-color: purple;border-radius: 10px;" />
+    <button class="btn btn-outline-dark my-2 my-sm-0 btn-sm" (click)="Searching()">Search</button>
+   
   
   
   
 </form>
+ 
 
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
@@ -38,11 +40,10 @@
 
   
   
-<app-nav-bar [searchTerm]="searchTerm"></app-nav-bar>
+<app-nav-bar *ngIf="searching" [searchTerm]="searchTerm"></app-nav-bar>
 
 
-
-  <div class="app-body">
+  <div class="app-body" (click)="notSearching()">
     <router-outlet></router-outlet>
   </div>
   

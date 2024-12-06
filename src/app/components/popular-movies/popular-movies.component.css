@@ -73,7 +73,7 @@
     margin-left: 3cm;
 }
 .slide{
-    margin-left: 1cm;
+    margin-left: 1.5cm;
     margin-bottom: 2cm;
      padding-top: 3cm;
      max-height: fit-content;
@@ -148,4 +148,30 @@
         opacity: 0;
     }
     
+}
+
+@media (height<400px)  {
+    .ForRow{
+        display: flex; 
+        
+        flex-wrap: wrap; 
+        column-gap: 1cm;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .mvcard{
+        width: 90px;
+        height: 130px;
+        
+    }
+    .mvCardRow{
+        display: flex; 
+        flex-wrap: wrap; 
+        gap: 2cm; 
+        justify-content: space-between;
+    }
+    
+    .container{
+        margin-left: 2cm;
+    }
 }
