@@ -251,6 +251,7 @@ export class AuthService {
       localStorage.removeItem('user');
       this.router.navigate(['sign-in']);
       this.toastr.success('Signed out successfully');
+      location.reload();
     });
   }
 

@@ -4,6 +4,7 @@ a:not([href]):not([tabindex]):focus,
 a:not([href]):not([tabindex]):hover {
   color: #fffbfe;
   background: transparent;
+  cursor: pointer;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -162,7 +163,11 @@ body {
         border-radius: 10px;
       }
  }
-
+@media (width<400px) {
+  .search{
+    width: 100px;
+  }
+}
  @media (height<500px) {
     .btn-sm{
         height: 30px;
