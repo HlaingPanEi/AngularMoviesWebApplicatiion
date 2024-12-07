@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../../movie.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-home-page',
@@ -9,7 +10,7 @@ import { MovieService } from '../../movie.service';
 export class HomePageComponent implements OnInit{
   topRated: any;
   movieListResults:any;
-   constructor(private movieService: MovieService){
+   constructor(private movieService: MovieService,public authService: AuthService){
     
    }
    ngOnInit(): void {

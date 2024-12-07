@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
@@ -8,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopularMoviesComponent implements OnInit{
   groupedMovieList: any;
+  searchTerm: string = '';
+ buttonColor: string = 'light-mode-toggle';
+ btnIcon: string = 'far fa-moon'
+ searching: boolean = false; 
   movieListResults =[
     {
       "adult": false,
@@ -414,7 +419,12 @@ export class PopularMoviesComponent implements OnInit{
   ]
   isCollapsed = true;
   isDarkMode = false;
-
+  Searching() {
+    this.searching = !this.searching;
+  }
+  notSearching(){
+    this.searching = false;
+  }
   toggleDarkMode() {
     this.isDarkMode = !this.isDarkMode;
   }
@@ -425,7 +435,7 @@ export class PopularMoviesComponent implements OnInit{
   }
 
 
-  constructor(){}
+  constructor(public authService: AuthService){}
   ngOnInit() {
     this.groupedMovieList = this.chunkArray(this.movieListResults, 2); // Groups of 2 movies per slide
   }

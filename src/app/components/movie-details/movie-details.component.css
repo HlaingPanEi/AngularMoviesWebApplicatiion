@@ -1,6 +1,11 @@
+
 .all{
     margin: 0% 0% 5% 7%;
     display: flex;
+}
+.btn-sm{
+    font: 10px;
+    height: 30px;
 }
 .title{
     font-size: 100px;
@@ -110,6 +115,10 @@
         font-family: "jaro", cursive;
        
         
+    }
+    .btn-sm{
+        height: 15px;
+        font-size: 5px;
     }
     .overview{
         font-size: 15px;

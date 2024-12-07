@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 <div [ngClass]="{'dark-mode': isDarkMode}" >
  
  
@@ -34,14 +35,18 @@
       <a class="nav-link" [routerLink]="['top-rated']" routerLinkActive="active">Top Rated</a>
     </li>
   </ul>
+=======
+<div *ngIf="shouldShowNav">
+<app-nav class="fixed-top"></app-nav>
+    
+    
+  <app-nav-bar *ngIf="searching" [searchTerm]="searchTerm"></app-nav-bar>
+>>>>>>> 94d28e1 (adding dark mode,search bar and sign-in,sign-up)
 </div>
-<button  [ngClass]="buttonColor" (click)="toggleDarkMode()"><i [ngClass]="btnIcon"></i></button>
-</nav>
-
   
-  
-<app-nav-bar *ngIf="searching" [searchTerm]="searchTerm"></app-nav-bar>
+<router-outlet></router-outlet>
 
+<<<<<<< HEAD
 
   <div class="app-body" (click)="notSearching()">
     <router-outlet></router-outlet>
@@ -49,3 +54,6 @@
   
   <app-footer></app-footer>
 </div>
+=======
+<app-footer></app-footer>
+>>>>>>> 94d28e1 (adding dark mode,search bar and sign-in,sign-up)

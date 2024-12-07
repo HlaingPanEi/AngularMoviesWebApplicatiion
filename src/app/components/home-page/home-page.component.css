@@ -6,5 +6,15 @@
 .bg{
     background-color: transparent;
     padding-bottom: 2cm;
+    padding-top: 200px;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(250deg, rgb(133, 110, 145), rgb(157, 169, 215) 70%); /* Dark mode background */
+    color: #ececec; /* Text color */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    
+  }

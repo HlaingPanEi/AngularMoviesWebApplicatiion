@@ -1,5 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +20,23 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchPipe } from './search.pipe';
 
+
+import {AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from './environment/environment';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { NavComponent } from './components/nav/nav.component';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +46,13 @@ import { SearchPipe } from './search.pipe';
     NavBarComponent,
     MovieDetailsComponent,
     FooterComponent,
-    SearchPipe
+    SearchPipe,
+    VerifyEmailComponent,
+    DashboardComponent,
+    ForgotPasswordComponent,
+    SignInComponent,
+    SignUpComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +60,14 @@ import { SearchPipe } from './search.pipe';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    AngularFireStorageModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     
   ],
   providers: [

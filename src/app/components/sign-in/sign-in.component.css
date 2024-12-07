@@ -1,0 +1,22 @@
+.displayTable{
+    
+    background: transparent;
+    background-size: cover;
+    
+}
+
+
+.authBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+ 
+
+.signInIcon {
+   width: 100px;
+   margin: 0 0% 0 0%;
+  }

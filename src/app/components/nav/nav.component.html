@@ -1,0 +1,53 @@
+
+
+
+<div [ngClass]="{'dark-mode': isDarkMode}" >
+ 
+ 
+
+    <nav class="navbar navbar-expand-lg  sticky-top shadow" style="background-color: transparent;">
+      <a class="navbar-brand navname"  routerLinkActive="active" > Movies</a>
+    
+      <form class="form-inline my-2 my-sm-0 sm" style=" display: flex; background-color: transparent;border-color: transparent;" >
+       
+        <input type="text" name="searchTerm" [(ngModel)]="searchTerm"  class="search" [ngModelOptions]="{standalone: true}" placeholder="Search for movies..." style="background-color: transparent;border-color: purple;border-radius: 10px;color: aliceblue;" />
+        <button class="btn btn-outline-dark my-2 my-sm-0 btn-sm" (click)="Searching()">Search</button>
+       
+      
+      
+      
+    </form>
+     
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link " (click)="authService.GoHome()" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="authService.GoPopular()" routerLinkActive="active">Popular</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="authService.GoTopRated()" routerLinkActive="active">Top Rated</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" (click)="authService.GoDashboard()" routerLinkActive="active"><img [src]="currentPhotoURL" class="align-self-start mr-5 img-thumbnail rounded-circle" width="50px"  /></a>
+          </li>
+      </ul>
+    </div>
+    <button  [ngClass]="{'dark-mode-toggle': isDarkMode, 'light-mode-toggle': !isDarkMode}" (click)="toggleDarkMode()" ><i [ngClass]="btnIcon"></i></button>
+    </nav>
+    
+      
+      
+    <app-nav-bar *ngIf="searching" [searchTerm]="searchTerm"></app-nav-bar>
+    
+    
+     
+      
+    </div>

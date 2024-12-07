@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MovieService } from '../../movie.service';
 
 
@@ -18,6 +18,7 @@ export class MovieDetailsComponent implements OnInit{
   constructor(
     private activatedRoute: ActivatedRoute,
     private movieService: MovieService,
+    private router: Router
   ){}
   ngOnInit() {
     
@@ -37,6 +38,9 @@ results.forEach((movie: any) => {
 });
   }
 
+  onBack(): void{
+    this.router.navigate(['home']);
 
+  }
 
 }
