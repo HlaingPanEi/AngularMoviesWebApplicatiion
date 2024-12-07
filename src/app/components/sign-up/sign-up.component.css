@@ -1,0 +1,20 @@
+.redirectToLogin{
+    color: rgb(5, 5, 198);
+}
+.redirect{
+    color: rgb(137, 158, 217);
+}
+.displayTable{
+    
+    background: transparent;
+    background-size: cover;
+    
+}
+.authBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  

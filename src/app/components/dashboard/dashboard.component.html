@@ -1,0 +1,87 @@
+<div class="container-fluid" style="margin-top: 100px;">
+  <div class="row">
+    <nav class="col-md-3 col-lg-2 sidebar">
+      <div class="profile-sidebar">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link">
+              <i class="fas fa-user"></i> User Profile
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="authService.GoHome()">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="authService.SignOut()">
+              <i class="fas fa-sign-out-alt"></i> Log out
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="inner-adjust">
+        <div class="pt-3 pb-2 mb-3 borderbottom userProfile">
+          <h1 class="h2">User Profile</h1>
+        </div>
+
+        <div class="row" *ngIf="authService.userData as user">
+          <div class="col-md-12" *ngIf="!ToUpdate">
+            <div class="media profile-content">
+              <img [src]="newPhotoURLPreview()" alt="Profile Picture" class="align-self-start mr-5 img-thumbnail rounded-circle" width="100px" />
+              <div class="media-body">
+                <p class="pn">Name <strong class="n">{{ user.displayName ? user.displayName : "User" }}</strong></p>
+                <p class="pn">User ID: <strong class="n">{{ user.uid }}</strong></p>
+                <p class="pn">Email: <strong class="n">{{ user.email }}</strong></p>
+                <button class="btn btn-outline-dark btn-sm" (click)="toUpadate()">Edit Profile</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-container" *ngIf="ToUpdate">
+          <h2>Update Your Profile</h2>
+
+          <div class="form-group">
+            <label for="displayName">Display Name</label>
+            <input 
+              type="text" 
+              id="displayName" 
+              [(ngModel)]="newDisplayName" 
+              class="form-control" 
+              placeholder="Enter your new display name" />
+          </div>
+
+
+          <div class="form-group">
+            <label for="photoFile">Profile Picture</label>
+            <input 
+              type="file" 
+              id="photoFile" 
+              (change)="onPhotoFileChange($event)" 
+              class="form-control" />
+
+            <div *ngIf="newPhotoFile">
+              <p>Selected Image: {{ newPhotoFile.name }}</p>
+              <img [src]="newPhotoURLPreview()" alt="Profile Picture" class="align-self-start mr-5 img-thumbnail rounded-circle" width="100px" />
+            </div>
+
+            <div *ngIf="!newPhotoFile && currentPhotoURL">
+              <p>Current Profile Picture:</p>
+              <img [src]="currentPhotoURL" alt="Profile Picture" class="align-self-start mr-5 img-thumbnail rounded-circle"  width="100px"/>
+            </div>
+          </div>
+
+          <button (click)="updateProfile()" class="btn btn-primary">Update Profile</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+
+
+

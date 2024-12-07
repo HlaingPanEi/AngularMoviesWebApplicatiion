@@ -18,9 +18,9 @@ export class NavBarComponent implements OnInit{
        this.movies = this.movieService.getMovies();
    }
    navigateAndRefresh(movieTitle: string) {
-    this.router.navigate([`/${movieTitle}`]).then(() => {
+    return this.router.navigate([`/${movieTitle}`]).then(() => {
       // After navigation, trigger a refresh by navigating to the same route again
-      window.location.reload();
+      // window.location.reload();
     });
    
   }

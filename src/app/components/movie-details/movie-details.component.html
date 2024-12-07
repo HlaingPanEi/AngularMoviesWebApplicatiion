@@ -1,5 +1,7 @@
 <div class="all" >
+  <button class="btn btn-danger btn-sm " (click)="onBack()" >back</button>
   <div class="card cardb"[routerLink]="['/',Result.title]" >
+    
       <img class="card-img img"
       [src]="'http://image.tmdb.org/t/p/w500/' + Result.poster_path"
       alt=""
@@ -30,6 +32,7 @@
           {{Result.overview}}</div>
      </div>
      <div class="rld">Releast Date ({{Result.release_date}})</div>
+     
    </div>
 </div>
 <hr style="border: 2px dotted;">

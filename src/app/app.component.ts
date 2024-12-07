@@ -1,6 +1,7 @@
-import { Component,Input, OnInit} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 import { MovieService } from './movie.service';
+import { Router,NavigationEnd } from '@angular/router';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { MovieService } from './movie.service';
 })
 export class AppComponent implements OnInit{
  
-
+  showNav = false;
   isCollapsed = true;
   isDarkMode = false;
   movies: any;
@@ -18,7 +19,14 @@ export class AppComponent implements OnInit{
  buttonColor: string = 'light-mode-toggle';
  btnIcon: string = 'far fa-moon'
  searching: boolean = false; 
-  constructor(private movieService: MovieService) {}
+  constructor(private movieService: MovieService,public router: Router) {
+    
+  }
+
+  get shouldShowNav(): boolean {
+    const validPaths = ['/home', '/popular', '/top-rated'];
+    return validPaths.some(path => this.router.url.endsWith(path));
+  }
 
 ngOnInit(): void {
   
@@ -31,10 +39,17 @@ Searching() {
 notSearching(){
   this.searching = false;
 }
+
   toggleDarkMode() {
     this.isDarkMode = !this.isDarkMode;
     this.buttonColor = (this.buttonColor === 'dark-mode-toggle') ? 'light-mode-toggle' : 'dark-mode-toggle';
     this.btnIcon = (this.btnIcon === 'far fa-lightbulb')? 'far fa-moon' : 'far fa-lightbulb';
+    // Add or remove the 'dark-mode' class to the root element based on dark mode status
+    if (this.isDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
   }
 
 

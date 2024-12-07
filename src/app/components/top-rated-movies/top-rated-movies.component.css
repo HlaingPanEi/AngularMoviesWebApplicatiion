@@ -1,3 +1,10 @@
+.sidebar .nav-link.active,
+.sidebar a:hover,
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]):hover {
+  color: #fffbfe;
+  background: transparent;
+}
 
 
 .ForRow{
@@ -150,7 +157,7 @@
 }
 
 
-@media (height<400px) {
+@media (height<500px) {
     .ForRow{
         display: flex; 
         
@@ -174,4 +181,17 @@
     .container{
         margin-left: 2cm;
     }
+    .bgImg{
+        position: absolute;
+        background-position-x: 90%;
+        background-position-y: 50%;
+        width: 82%;
+        opacity: 40%;
+        height: 200px;
+    }
+    .slide{
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
 }
