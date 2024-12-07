@@ -4,6 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Features
 support dark mode and optimized for both desktop and mobile.
+can find movie with search bar.
+user profile (name and photo) can be edited.
+
+
 
 ## Development server
 
