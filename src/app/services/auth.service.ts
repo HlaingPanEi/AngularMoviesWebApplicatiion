@@ -101,7 +101,6 @@ export class AuthService {
       });
   }
 
-  // Send email verification
   SendVerificationMail() {
     return this.afAuth.currentUser
       .then((user) => user?.sendEmailVerification())
@@ -251,6 +250,7 @@ export class AuthService {
       localStorage.removeItem('user');
       this.router.navigate(['sign-in']);
       this.toastr.success('Signed out successfully');
+      window.location.replace('sign-in');
     });
   }
 

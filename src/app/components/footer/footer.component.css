@@ -13,7 +13,7 @@
 @media (width< 800px) {
      .nl{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
         text-align: center;
@@ -21,6 +21,9 @@
      .footer{
         padding-bottom: 4cm;
         padding-top: 1cm;
+    }
+    .ft{
+        font-size: 10px;
     }
 } 
 

@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 
 import { MovieService } from './movie.service';
-import { Router,NavigationEnd } from '@angular/router';
+import { Router, } from '@angular/router';
 
 
 @Component({

@@ -21,7 +21,7 @@ body {
     position: fixed;
     top: 10px;
     right: 10px;
-    background-color: #444;
+    
     color: #000000;
     border: none;
     width: 30px;
@@ -33,7 +33,7 @@ body {
     position: fixed;
     top: 10px;
     right: 10px;
-    background-color: #999999;
+    background-color: transparent;
     color: #ffffff;
     border: none;
    width: 30px;

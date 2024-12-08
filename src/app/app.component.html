@@ -1,13 +1,8 @@
-
-
-
 <div *ngIf="shouldShowNav">
-<app-nav class="fixed-top"></app-nav>
+  <app-nav class="fixed-top"></app-nav>
+    <app-nav-bar *ngIf="searching" [searchTerm]="searchTerm"></app-nav-bar>
+  </div>
     
-    
-  <app-nav-bar *ngIf="searching" [searchTerm]="searchTerm"></app-nav-bar>
-</div>
+  <router-outlet></router-outlet>
   
-<router-outlet></router-outlet>
-
-<app-footer></app-footer>
+  <app-footer></app-footer>

@@ -6,6 +6,7 @@ a:not([href]):not([tabindex]):hover {
   background: transparent;
 }
 
+
 .ForRow{
     display: flex; 
     
@@ -25,6 +26,7 @@ a:not([href]):not([tabindex]):hover {
 .bgImg{
     position: absolute;
     background-image: url('./images/moana2movie.jpg');
+   
     width: 90%;
     opacity: 40%;
     height: 630px;
@@ -94,6 +96,7 @@ a:not([href]):not([tabindex]):hover {
         gap: 0.5cm; 
         justify-content: space-between;
         width: 100%;
+        
     }
     .mvcard{
         width: 90px;
@@ -135,7 +138,7 @@ a:not([href]):not([tabindex]):hover {
         margin-right: 0cm;
         margin-bottom: 1cm;
         box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
-        height: 350px;
+        height: 300px;
         
     }
     .bgImg{
@@ -143,10 +146,9 @@ a:not([href]):not([tabindex]):hover {
         
         width: 100%;
         opacity: 20%;
-        height: 350px;
-        background-position-x: 0;
-        background-size: cover;
+        height: 300px;
         
+        background-size: cover;
     }
     .carousel{
         height: 0;
@@ -155,8 +157,25 @@ a:not([href]):not([tabindex]):hover {
     }
     
 }
+@media (width<950px) and (height<450px) {
+    .bgImg{
+        position: absolute;
+        background-position-y: 30%;
+        background-position-x: 20%;
+        width: 90%;
+        opacity: 40%;
+        height: 300px;
+    }
+    .shadow{
+        margin-left: 0;
+        width: 100%;
+    }
+}
 
-@media (height<400px)  {
+@media (height<500px) {
+    .shadow{
+        height: 300px;
+    }
     .ForRow{
         display: flex; 
         
@@ -180,227 +199,16 @@ a:not([href]):not([tabindex]):hover {
     .container{
         margin-left: 2cm;
     }
-}
-
-
-
-
-.sidebar .nav-link.active,
-.sidebar a:hover,
-a:not([href]):not([tabindex]):focus,
-a:not([href]):not([tabindex]):hover {
-  color: #fffbfe;
-  background: transparent;
-}
-body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(250deg, rgb(133, 110, 145), rgb(157, 169, 215) 70%); /* Dark mode background */
-    color: #ececec; /* Text color */
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    
-  }
-  .search{
-    height: 30px;
-    width: 300px;
-    
-    font-size: xx-small;
-  }
-
-
-  .dark-mode-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #444;
-    color: #000000;
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  .light-mode-toggle{
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #999999;
-    color: #ffffff;
-    border: none;
-   width: 30px;
-   height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  .dark-mode {
-    background: linear-gradient(250deg, rgb(63, 40, 75), rgb(31, 37, 60) 70%);
-    color: #ddd;
-  }
-  
-
-
-.bg{
-   
-    background: rgba(0, 151, 193, 0.6);
-    
-     
- }
- .navbar{
-    position: sticky;
-    top:0;
-    
-    height: 100px;
-    backdrop-filter: blur(20px);
-    width: 90%;
-    margin: 0% 0% 0% 5%;
-    border-radius: 10px;
-
-}
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
- 
- 
- .navname{
-     
-     font-family: "Hachi Maru Pop", cursive;
-     font-weight: bolder;
-     font-size: 40px;
-     color:blueviolet;
-     padding-left: 3cm;
-     
- }
- .navbar-collapse{
-     margin: 0% 3% 0% 20%;
- }
-.nav-link{
-    color: blueviolet;
-}
-
-
-
-
-
-
-
- 
- 
- @media (max-width: 768px){
-     .navname{
-         margin-left: 2%;
-         
-         font-size: 20px;
+    .bgImg{
+        position: absolute;
         
-     }
-     .nav-link{
-        color: rgb(137, 98, 173);
+        width: 100%;
+        opacity: 40%;
+        height: 300px;
     }
-     .mr-sm-0{
-         height: 40px;
-         margin-top: .2cm;
-     }
-     .navbar-collapse{
-         margin-left: 0%;
-         text-align: right;
-         margin-right: 1%;
-     }
-     .dark-mode-toggle {
-        position: fixed;
-        top: 1px;
-        right: 90%;
-        border: none;
-        padding: 3px;
-        border-radius: 50%;
-        cursor: pointer;
-        
-        
-      }
-      .light-mode-toggle{
-        position: fixed;
-        top: 1px;
-        right: 90%;
-        background-color: #999999;
-        color: #ffffff;
-        border: none;
-        padding: 3px;
-        border-radius: 50%;
-        cursor: pointer;
-      }
-      
-      .search{
-        height: 30px;
-        width: 200px;
-        margin-top: .2cm;
-        font-size: xx-small;
-      }
-      .navbar{
-        position: sticky;
-        top:0;
-        height: auto;
-        backdrop-filter: blur(20px);
-        width: 90%;
-        margin: 0% 0% 0% 5%;
-        border-radius: 10px;
-      }
- }
-
- @media (height<500px) {
-    .btn-sm{
-        height: 30px;
-        
-    }
-    .search{
-        height: 30px;
-        width: 200px;
-        margin-top: 0cm;
-        font-size: xx-small;
-      }
-      .navbar{
-        position: sticky;
-        top:0;
-        
-        height: auto;
-        backdrop-filter: blur(20px);
-        width: 90%;
-        margin: 0% 0% 0% 5%;
-        border-radius: 10px;
-      }
-      .slide{
+    .slide{
         width: 0;
         height: 0;
         opacity: 0;
       }
-      .bgImg{
-        position: absolute;
-       
-        width: 82%;
-        opacity: 40%;
-        height: 200px;
-    }
-    
- }
+}

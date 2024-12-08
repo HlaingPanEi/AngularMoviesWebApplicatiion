@@ -37,9 +37,7 @@ export class DashboardComponent implements OnInit {
     }
   }
 
-  /**
-   * Safely parse user data and load phone number from Firestore if available.
-   */
+
   async initializeUserData() {
     try {
       const userStr = localStorage.getItem('user');
@@ -98,7 +96,11 @@ export class DashboardComponent implements OnInit {
     return this.previewPhotoURL || this.currentPhotoURL;
   }
 
- 
+ cancel(){
+  this.ToUpdate = false;
+  return this.router.navigate(['dashboard']);
+  
+ }
   async updateProfile() {
     if (this.newDisplayName.trim()) {
       try {
@@ -117,7 +119,6 @@ export class DashboardComponent implements OnInit {
 
         this.router.navigate(['dashboard']);
         this.ToUpdate = false;
-        this.toastr.success('Profile updated successfully!');
       } catch (error) {
         console.error('Error during profile update:', error);
         this.toastr.error('Could not update profile.');

@@ -1,11 +1,11 @@
-<div class="container-fluid" style="margin-top: 100px;">
+<div class="container-fluid" >
   <div class="row">
-    <nav class="col-md-3 col-lg-2 sidebar">
+    <nav class="col-md-3 col-lg-2 sidebar" style="position: sticky;">
       <div class="profile-sidebar">
-        <ul class="nav flex-column">
+        <ul class="nav ">
           <li class="nav-item">
             <a class="nav-link">
-              <i class="fas fa-user"></i> User Profile
+              <i class="fas fa-user"></i>
             </a>
           </li>
           <li class="nav-item">
@@ -14,10 +14,16 @@
             </a>
           </li>
           <li class="nav-item">
+            <a  class="nav-link">
+              <span class=" " (click)="toUpadate()">Edit Profile</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" (click)="authService.SignOut()">
               <i class="fas fa-sign-out-alt"></i> Log out
             </a>
           </li>
+          
         </ul>
       </div>
     </nav>
@@ -31,14 +37,20 @@
         <div class="row" *ngIf="authService.userData as user">
           <div class="col-md-12" *ngIf="!ToUpdate">
             <div class="media profile-content">
-              <img [src]="newPhotoURLPreview()" alt="Profile Picture" class="align-self-start mr-5 img-thumbnail rounded-circle" width="100px" />
+              <img 
+                id="profilePicture" 
+                src="{{ newPhotoURLPreview() || 'assets/dummy-user.webp' }}" 
+                alt="Profile Picture" 
+                class="img-thumbnail" style="margin-left: 10%;"
+                onerror="this.src='assets/dummy-user.webp';"
+              />
               <div class="media-body">
                 <p class="pn">Name <strong class="n">{{ user.displayName ? user.displayName : "User" }}</strong></p>
-                <p class="pn">User ID: <strong class="n">{{ user.uid }}</strong></p>
-                <p class="pn">Email: <strong class="n">{{ user.email }}</strong></p>
-                <button class="btn btn-outline-dark btn-sm" (click)="toUpadate()">Edit Profile</button>
+                <p class="pn">Email <strong class="n">{{ user.email }}</strong></p>
+               
               </div>
             </div>
+            
           </div>
         </div>
 
@@ -66,7 +78,7 @@
 
             <div *ngIf="newPhotoFile">
               <p>Selected Image: {{ newPhotoFile.name }}</p>
-              <img [src]="newPhotoURLPreview()" alt="Profile Picture" class="align-self-start mr-5 img-thumbnail rounded-circle" width="100px" />
+              <img [src]="newPhotoURLPreview()" alt="Profile Picture" class=" mr-5 img-thumbnail rounded-circle" width="100px" />
             </div>
 
             <div *ngIf="!newPhotoFile && currentPhotoURL">
@@ -75,7 +87,10 @@
             </div>
           </div>
 
-          <button (click)="updateProfile()" class="btn btn-primary">Update Profile</button>
+         <div class="flex-row">
+          <span class="edit "  (click)="updateProfile()"  >Update</span>
+          <span class="edit  " (click)="cancel()" >cancel</span>
+         </div>
         </div>
       </div>
     </main>

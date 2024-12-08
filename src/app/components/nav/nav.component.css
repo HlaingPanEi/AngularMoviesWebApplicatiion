@@ -4,6 +4,7 @@ a:not([href]):not([tabindex]):focus,
 a:not([href]):not([tabindex]):hover {
   color: #fffbfe;
   background: transparent;
+  cursor: pointer;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -26,31 +27,7 @@ body {
   }
 
 
-  .dark-mode-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #444;
-    color: #000000;
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  .light-mode-toggle{
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #999999;
-    color: #ffffff;
-    border: none;
-   width: 30px;
-   height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
+
   .dark-mode {
    
     color: #ddd;
@@ -131,19 +108,32 @@ body {
         padding: 3px;
         border-radius: 50%;
         cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
         
         
       }
       .light-mode-toggle{
-        position: fixed;
         top: 1px;
         right: 90%;
-        background-color: #999999;
+        background-color: transparent;
         color: #ffffff;
         border: none;
         padding: 3px;
         border-radius: 50%;
         cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .dark-mode-toggle, .light-mode-toggle {
+        border: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        background-color: transparent;
+        font-weight: bold;
+        cursor: pointer;
+        outline: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
       
       .search{
@@ -162,7 +152,11 @@ body {
         border-radius: 10px;
       }
  }
-
+@media (width<400px) {
+  .search{
+    width: 100px;
+  }
+}
  @media (height<500px) {
     .btn-sm{
         height: 30px;
@@ -186,6 +180,7 @@ body {
       }
       .dark-mode-toggle {
         position: fixed;
+        background-color: transparent;
         top: 1px;
         right: 90%;
         border: none;
@@ -199,7 +194,7 @@ body {
         position: fixed;
         top: 1px;
         right: 90%;
-        background-color: #999999;
+        background-color: transparent;
         color: #ffffff;
         border: none;
         padding: 3px;
